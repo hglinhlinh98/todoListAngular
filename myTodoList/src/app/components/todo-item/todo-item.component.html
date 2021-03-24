@@ -1,0 +1,21 @@
+<div class =" todo-item d-flex justify-content-between " (mouseover) = "isHoverred = true" (mouseout) = "isHoverred = false">
+  <div class= "todo">
+    <input type = "checkbox"  [checked] = "mytodo.isCompleted" class = "toggle text-centernode" (change) = "changeTodoStatus()" [id] = "mytodo.id">
+    <!-- <i *ngIf ="mytodo.isCompleted" (change) = "changeTodoStatus()" class="far fa-check-circle" ></i> -->
+    <label [for]= "mytodo.id" *ngIf = "!isEditing" [ngClass] = "{'checked' : mytodo.isCompleted}"> {{mytodo.content}} </label>
+    <input class= "input-edit" *ngIf = "isEditing" [(ngModel)]= "mytodo.content" type = "text" name = "editTodo" (keyup.enter) = "submitEdit()" >
+  </div>
+  <div class= "d-flex align-items-center">
+    <span class = "icon-wrapper edit" [hidden] = "mytodo.isCompleted" [ngClass] = "{'active': isHoverred}" (click) = "isEditing = true" >
+      <i class="fas fa-pencil-alt" ></i>
+    </span>
+    <span class="icon-wrapper" [ngClass] = "{'active': isHoverred}" (click) = "removeTodo()" >
+      <i class="far fa-trash-alt" ></i>
+    </span>
+  </div>
+  <!-- <form class= "edit-form" *ngIf = "isEditing" [(ngModel)]= "mytodo.content" [ngModelOptions]="{standalone: true}">
+    <input class= "input-edit" type = "text" name = "editTodo" >
+
+  </form> -->
+
+</div>

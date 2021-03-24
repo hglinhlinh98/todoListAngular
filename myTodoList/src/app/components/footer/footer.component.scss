@@ -1,0 +1,18 @@
+.footer {
+  border-top: 1px solid #ddd;
+  margin-left: 5px;
+  & .filter-btn {
+    margin: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    color: grey;
+
+
+  }
+  
+  & .borderactive {
+    border: 1px solid orange;
+    color: black ;
+  }
+
+}

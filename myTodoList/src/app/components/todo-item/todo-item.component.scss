@@ -1,0 +1,45 @@
+.icon-wrapper{
+  color: white;
+  background:  white;
+  &:hover{
+    transform: scale(1.2 , 1.2);
+    // color: rgb(247,78,48)
+  }
+  &.active{
+    color: tomato;
+    cursor: pointer;
+  }
+  &.edit{
+    margin-right: 5px;
+    &:hover{
+      transform: scale(1.2 , 1.2);
+      color: rgb(0,162,255)
+    }
+    &.active{
+      color: blue;
+      cursor: pointer;
+    }
+
+  }
+}
+// .todo{
+//   &.checked{
+//     text-decoration: line-through;
+//   }
+//
+.checked{
+  text-decoration: line-through;
+}
+
+.toggle{
+  margin-left: 5px;
+}
+.input{
+  border: 1px solid grey;
+}
+.todo-item{
+  border-bottom: 1px solid rgb(206, 201, 201);
+}
+input:focus{
+  outline: none;
+}
